@@ -10,10 +10,10 @@ class GymSearch {
     /**
      *
      */
-    function __construct( $guild ) {
+    function __construct( $guild, $gym = true ) {
         $this->debug = false;
         $this->query = false;
-        $this->gyms = Stop::where('gym', 1)
+        $this->gyms = Stop::where('gym', $gym)
             ->where('city_id', $guild->city->id)
             ->get();
         $this->sanitizedNames = $this->getSanitizedNames();

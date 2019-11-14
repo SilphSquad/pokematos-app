@@ -50,6 +50,10 @@ class Guild extends Model
         'raidreporting_channel_type' => ['default' => '', 'type' => 'string'],
         'raidreporting_channel_discord_id' => ['default' => '', 'type' => 'string'],
 
+        'questreporting_text_active' => ['default' => false, 'type' => 'boolean'],
+        'questreporting_text_delete' => ['default' => false, 'type' => 'boolean'],
+        'questreporting_text_prefixes' => ['default' => ["+quete","+Quete"], 'type' => 'array'],
+
         'welcome_active' => ['default' => false, 'type' => 'boolean'],
         'welcome_message' => ['default' => 'Bienvenue {utilisateur}, nous sommes ravis de te voir ici !', 'type' => 'string'],
         'welcome_channel_discord_id' => ['default' => false, 'type' => 'string'],
